@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Admission Guru360 | Elite Educational Concierge</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-variant": "#e4e2e2",
+                      "on-surface-variant": "#46464e",
+                      "on-secondary-fixed-variant": "#5d4201",
+                      "background": "#fbf9f8",
+                      "surface-container-highest": "#e4e2e2",
+                      "primary-fixed": "#dde1ff",
+                      "on-secondary-container": "#785a1a",
+                      "tertiary-container": "#191c1d",
+                      "on-primary-container": "#7b82a8",
+                      "inverse-surface": "#303030",
+                      "error-container": "#ffdad6",
+                      "on-tertiary": "#ffffff",
+                      "surface-tint": "#565c80",
+                      "surface": "#fbf9f8",
+                      "on-tertiary-container": "#828485",
+                      "tertiary-fixed": "#e1e3e4",
+                      "secondary": "#775a19",
+                      "error": "#ba1a1a",
+                      "on-primary-fixed-variant": "#3e4567",
+                      "primary-fixed-dim": "#bec4ee",
+                      "outline": "#76767f",
+                      "on-background": "#1b1c1c",
+                      "on-secondary": "#ffffff",
+                      "tertiary": "#000000",
+                      "surface-dim": "#dbd9d9",
+                      "secondary-fixed-dim": "#e9c176",
+                      "primary": "#000000",
+                      "on-error": "#ffffff",
+                      "secondary-fixed": "#ffdea5",
+                      "on-primary": "#ffffff",
+                      "primary-container": "#121939",
+                      "on-tertiary-fixed": "#191c1d",
+                      "inverse-primary": "#bec4ee",
+                      "on-primary-fixed": "#121939",
+                      "on-error-container": "#93000a",
+                      "on-secondary-fixed": "#261900",
+                      "inverse-on-surface": "#f2f0f0",
+                      "outline-variant": "#c7c5cf",
+                      "secondary-container": "#fed488",
+                      "surface-container-low": "#f5f3f3",
+                      "surface-container": "#efeded",
+                      "surface-container-lowest": "#ffffff",
+                      "tertiary-fixed-dim": "#c5c7c8",
+                      "surface-bright": "#fbf9f8",
+                      "on-surface": "#1b1c1c",
+                      "surface-container-high": "#eae8e7",
+                      "on-tertiary-fixed-variant": "#454748"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0px",
+                      "lg": "0px",
+                      "xl": "0px",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "max-width": "1280px",
+                      "base": "8px",
+                      "margin-mobile": "20px",
+                      "gutter": "24px",
+                      "margin-desktop": "64px"
+              },
+              "fontFamily": {
+                      "label-sm": ["Hanken Grotesk"],
+                      "headline-lg": ["Source Serif 4"],
+                      "body-md": ["Hanken Grotesk"],
+                      "body-lg": ["Hanken Grotesk"],
+                      "headline-lg-mobile": ["Source Serif 4"],
+                      "label-md": ["Hanken Grotesk"],
+                      "headline-md": ["Source Serif 4"],
+                      "headline-xl": ["Source Serif 4"]
+              },
+              "fontSize": {
+                      "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                      "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                      "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                      "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                      "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .nav-link-active {
+            color: #ffdea5;
+            border-bottom: 2px solid #ffdea5;
+            padding-bottom: 4px;
+        }
+        .executive-border {
+            border: 1px solid rgba(199, 197, 207, 0.4);
+        }
+        .gold-gradient {
+            background: linear-gradient(135deg, #ffdea5 0%, #775a19 100%);
+        }
+        body {
+            background-color: #fbf9f8;
+            color: #1b1c1c;
+        }
+        /* Custom scrollbar for that premium feel */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #121939; }
+        ::-webkit-scrollbar-thumb { background: #775a19; border-radius: 0px; }
+    </style>
+</head>
+<body class="font-body-md text-body-md overflow-x-hidden">
+<!-- TopNavBar (Shared Component) -->
+<header class="w-full top-0 sticky bg-primary-container z-50 border-b border-on-secondary-fixed-variant/20 shadow-none">
+<nav class="flex justify-between items-center px-margin-desktop py-4 max-w-max-width mx-auto">
+<div class="font-headline-md text-headline-md text-secondary-fixed font-bold tracking-tight">
+                Admission Guru360
+            </div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="font-label-md text-label-md text-secondary-fixed border-b-2 border-secondary-fixed pb-1" href="#">Colleges</a>
+<a class="font-label-md text-label-md text-on-primary hover:text-secondary-fixed transition-colors duration-200" href="#">Programs</a>
+<a class="font-label-md text-label-md text-on-primary hover:text-secondary-fixed transition-colors duration-200" href="#">Direct Admission</a>
+<a class="font-label-md text-label-md text-on-primary hover:text-secondary-fixed transition-colors duration-200" href="#">Contact</a>
+</div>
+<div class="flex items-center gap-6">
+<a class="hidden lg:block font-label-md text-label-md text-on-primary hover:text-secondary-fixed transition-all" href="tel:+918012345678">+91-80-12345678</a>
+<button class="bg-secondary-fixed text-on-secondary-fixed px-6 py-2 font-label-md text-label-md hover:bg-secondary-container transition-all active:scale-95 uppercase tracking-widest">
+                    Apply Now
+                </button>
+</div>
+</nav>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative h-[870px] flex items-center overflow-hidden bg-primary-container">
+<div class="absolute inset-0 opacity-40">
+<img alt="Elite Academic Institution" class="w-full h-full object-cover" data-alt="A grand, neoclassical university building with massive white stone pillars and a clock tower, captured at dusk with warm golden lights illuminating the facade. The sky is a deep twilight navy. The atmosphere is prestigious, serene, and historically significant, mirroring high-end executive wealth management aesthetics." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyYB0174ARspVigrX1q7E380vlC7DKT5gxt4V3AwMwlhCaO5FRlMLyRXWbsGhbPo-tCrSEo5jRvYp0wQkq7NnFyDoVGJO6tr9q2RNzYdUXg29T6MdHPwac2OUA1dfvzrbSxC9w5J-9wOVgDCcKjG2tTzeGA_0ixJ2Bvp8jcO1O1mrEjfIpZ0pR-k69Q6ajWh4Yt4s_znD46lWbJv4blCM2noMpkruXHjgKqSxtX12Fi8ATI_9ru32_MgDpl2j4ZmXDdy2SiVYSSXQH"/>
+</div>
+<div class="absolute inset-0 bg-gradient-to-r from-primary-container via-primary-container/80 to-transparent"></div>
+<div class="relative z-10 px-margin-desktop max-w-max-width mx-auto w-full">
+<div class="max-w-2xl">
+<span class="inline-block py-1 px-4 bg-secondary text-on-secondary font-label-md text-label-md mb-6 uppercase tracking-[0.2em]">Private Educational Consultancy</span>
+<h1 class="font-headline-xl text-headline-xl text-on-primary mb-6 leading-tight">
+                        Your Elite Concierge to <span class="text-secondary-fixed italic">Tier-One</span> Education.
+                    </h1>
+<p class="font-body-lg text-body-lg text-on-primary-container mb-10 max-w-lg">
+                        Navigating the complexities of premium admissions with the discretion, precision, and authority of a private wealth management firm. 
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="bg-secondary-fixed text-on-secondary-fixed px-10 py-4 font-label-md text-label-md hover:bg-secondary-container transition-all uppercase tracking-widest font-bold">
+                            Schedule Consultation
+                        </button>
+<button class="border border-on-primary text-on-primary px-10 py-4 font-label-md text-label-md hover:bg-on-primary/10 transition-all uppercase tracking-widest">
+                            Our Portfolio
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Elite Institutions Grid (Asymmetric) -->
+<section class="py-24 px-margin-desktop max-w-max-width mx-auto">
+<div class="mb-16">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">Elite Institutions</h2>
+<div class="w-24 h-1 bg-secondary"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Large Featured Card -->
+<div class="md:col-span-8 group relative bg-white executive-border p-0 overflow-hidden">
+<div class="grid grid-cols-1 md:grid-cols-2 h-full">
+<div class="p-12 flex flex-col justify-center">
+<h3 class="font-headline-md text-headline-md text-primary mb-4">RVCE Bangalore</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Securing legacy through excellence. Our direct placement program for RVCE ensures a seat in India's most prestigious engineering hub.</p>
+<a class="inline-flex items-center text-secondary font-label-md text-label-md group-hover:gap-4 transition-all duration-300" href="#">
+                                EXPLORE PROGRAMS <span class="material-symbols-outlined ml-2">arrow_forward</span>
+</a>
+</div>
+<div class="h-64 md:h-full relative overflow-hidden">
+<img alt="Campus" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A modern architectural marvel of a university library building, featuring glass panels and sleek concrete geometry. Bright daylight casts crisp shadows, emphasizing the sharp, corporate minimalism. Lush green landscaping surrounds the structure, providing a high-status academic atmosphere in a light-mode color palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUhU3YQVbKbIeZaO7yJ20ZPYgSdGnL2iyquCoxHGqm6qXiZxOW2pO4v-dg-XzYmQSDfYXMWUX9TslN8R14oFvaKCpsFIC7ytVEGPLHtRrKwewWqY62IPtHF_mEfWxA0YtPB9I92M0Ksj-IqTsqGMWVUGy2urayyBFFhxJjFSqz19ib_VogqR5wW_7oslb8DqdwfqOYQsmuIs-Y5K3gwyONLM7ciKV17IDhei1raKb6f9Yg1OBjlwmZOg7bqyJZ2WDyvSUyS-1h8ux7"/>
+</div>
+</div>
+</div>
+<!-- Tall Card -->
+<div class="md:col-span-4 bg-primary-container p-12 flex flex-col justify-between">
+<div>
+<span class="text-secondary-fixed font-label-sm text-label-sm uppercase tracking-widest mb-4 block">New Partnership</span>
+<h3 class="font-headline-md text-headline-md text-on-primary mb-4">PES University</h3>
+<p class="text-on-primary-container font-body-md">Exclusive management quota allocations for the 2024-25 academic session.</p>
+</div>
+<div class="pt-8 border-t border-on-primary-container/20">
+<button class="text-secondary-fixed font-label-md text-label-md hover:underline">View Available Seats</button>
+</div>
+</div>
+<!-- Small Grid Items -->
+<div class="md:col-span-4 bg-white executive-border p-8 hover:bg-surface-container-low transition-colors group">
+<h4 class="font-headline-md text-[20px] text-primary mb-3">BMS College of Engineering</h4>
+<p class="text-on-surface-variant mb-6">Strategic consulting for admission into Bangalore's founding technical institute.</p>
+<span class="material-symbols-outlined text-secondary text-3xl group-hover:translate-x-2 transition-transform">trending_flat</span>
+</div>
+<div class="md:col-span-4 bg-white executive-border p-8 hover:bg-surface-container-low transition-colors group">
+<h4 class="font-headline-md text-[20px] text-primary mb-3">MSRIT</h4>
+<p class="text-on-surface-variant mb-6">Comprehensive documentation and placement services for MS Ramaiah Group.</p>
+<span class="material-symbols-outlined text-secondary text-3xl group-hover:translate-x-2 transition-transform">trending_flat</span>
+</div>
+<div class="md:col-span-4 bg-secondary-fixed p-8 flex flex-col justify-center text-on-secondary-fixed">
+<p class="font-headline-md text-center italic">"Excellence is not an act, but a habit."</p>
+</div>
+</div>
+</section>
+<!-- Admission Journey Timeline -->
+<section class="bg-primary-container py-24">
+<div class="px-margin-desktop max-w-max-width mx-auto">
+<div class="text-center mb-20">
+<h2 class="font-headline-lg text-headline-lg text-on-primary mb-4">The Admission Journey</h2>
+<p class="text-on-primary-container max-w-xl mx-auto">A meticulous, multi-stage process designed to ensure placement into your target institution with absolute certainty.</p>
+</div>
+<div class="relative">
+<!-- Progress Line -->
+<div class="absolute top-1/2 left-0 w-full h-[1px] bg-secondary-fixed/20 hidden md:block"></div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter relative z-10">
+<!-- Step 1 -->
+<div class="flex flex-col items-center text-center">
+<div class="w-16 h-16 bg-secondary-fixed flex items-center justify-center mb-8 rotate-45 group-hover:rotate-0 transition-transform">
+<span class="material-symbols-outlined text-on-secondary-fixed -rotate-45">clinical_notes</span>
+</div>
+<h5 class="text-on-primary font-headline-md text-[18px] mb-2 uppercase tracking-widest">Consultation</h5>
+<p class="text-on-primary-container font-body-md text-sm">Reviewing academic history and career aspirations with executive precision.</p>
+</div>
+<!-- Step 2 -->
+<div class="flex flex-col items-center text-center">
+<div class="w-16 h-16 bg-on-primary-container flex items-center justify-center mb-8 rotate-45">
+<span class="material-symbols-outlined text-primary-container -rotate-45">account_balance</span>
+</div>
+<h5 class="text-on-primary font-headline-md text-[18px] mb-2 uppercase tracking-widest">Selection</h5>
+<p class="text-on-primary-container font-body-md text-sm">Shortlisting institutions that align with long-term legacy goals.</p>
+</div>
+<!-- Step 3 -->
+<div class="flex flex-col items-center text-center">
+<div class="w-16 h-16 bg-on-primary-container flex items-center justify-center mb-8 rotate-45">
+<span class="material-symbols-outlined text-primary-container -rotate-45">edit_document</span>
+</div>
+<h5 class="text-on-primary font-headline-md text-[18px] mb-2 uppercase tracking-widest">Dossier</h5>
+<p class="text-on-primary-container font-body-md text-sm">Compiling all administrative requirements and financial formalities.</p>
+</div>
+<!-- Step 4 -->
+<div class="flex flex-col items-center text-center">
+<div class="w-16 h-16 bg-secondary-fixed flex items-center justify-center mb-8 rotate-45 shadow-[0_0_20px_rgba(255,222,165,0.3)]">
+<span class="material-symbols-outlined text-on-secondary-fixed -rotate-45">verified_user</span>
+</div>
+<h5 class="text-secondary-fixed font-headline-md text-[18px] mb-2 uppercase tracking-widest">Assurance</h5>
+<p class="text-on-primary-container font-body-md text-sm">Formal confirmation of admission and enrollment completion.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Fee Structure Table -->
+<section class="py-24 px-margin-desktop max-w-max-width mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+<div class="max-w-xl">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">Investment &amp; Fee Structure</h2>
+<p class="text-on-surface-variant font-body-md">Transparent and authoritative pricing for our concierge services. All fees are exclusive of university tuition.</p>
+</div>
+<div class="flex gap-4">
+<button class="bg-primary text-on-primary px-6 py-2 font-label-md text-label-md uppercase">B.Tech Plans</button>
+<button class="bg-surface-container-high text-on-surface-variant px-6 py-2 font-label-md text-label-md uppercase">MBA Plans</button>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-primary-container text-on-primary">
+<th class="p-6 font-label-md text-label-md uppercase tracking-widest">Service Tier</th>
+<th class="p-6 font-label-md text-label-md uppercase tracking-widest">Consultancy Fee</th>
+<th class="p-6 font-label-md text-label-md uppercase tracking-widest">Priority Access</th>
+<th class="p-6 font-label-md text-label-md uppercase tracking-widest">Documentation Support</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant">
+<tr class="bg-white hover:bg-surface-container-low transition-colors">
+<td class="p-6 font-headline-md text-[18px]">Standard Admissions</td>
+<td class="p-6 font-body-md font-bold">₹25,000</td>
+<td class="p-6 text-on-surface-variant"><span class="material-symbols-outlined text-error">close</span></td>
+<td class="p-6 text-on-surface-variant"><span class="material-symbols-outlined text-secondary">check</span> Included</td>
+</tr>
+<tr class="bg-white hover:bg-surface-container-low transition-colors">
+<td class="p-6 font-headline-md text-[18px]">Elite Concierge</td>
+<td class="p-6 font-body-md font-bold">₹75,000</td>
+<td class="p-6 text-on-surface-variant"><span class="material-symbols-outlined text-secondary">check</span> Top-5 Ranking</td>
+<td class="p-6 text-on-surface-variant"><span class="material-symbols-outlined text-secondary">check</span> Executive Concierge</td>
+</tr>
+<tr class="bg-secondary-fixed/10 hover:bg-secondary-fixed/20 transition-colors">
+<td class="p-6 font-headline-md text-[18px] flex items-center">
+                                Presidential Circle
+                                <span class="ml-3 px-2 py-1 bg-secondary text-[10px] text-on-secondary font-bold tracking-tighter uppercase">Invite Only</span>
+</td>
+<td class="p-6 font-body-md font-bold">₹1,50,000</td>
+<td class="p-6 text-on-surface-variant"><span class="material-symbols-outlined text-secondary">check</span> Unlimited Selection</td>
+<td class="p-6 text-on-surface-variant"><span class="material-symbols-outlined text-secondary" data-weight="fill">verified</span> Full Legal Advisory</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="bg-surface-container-low py-24">
+<div class="px-margin-desktop max-w-max-width mx-auto">
+<div class="mb-16 text-center">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">Client Success Stories</h2>
+<p class="text-on-surface-variant">Profiles of students who secured their legacy with our guidance.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Testimonial 1 -->
+<div class="bg-white p-10 executive-border flex flex-col justify-between">
+<div>
+<span class="material-symbols-outlined text-secondary-fixed-dim text-5xl mb-6">format_quote</span>
+<p class="font-body-lg italic text-primary mb-8 leading-relaxed">"The level of professionalism at Guru360 is unparalleled. They handled my daughter's RVCE admission with the same care a private bank handles our family portfolio."</p>
+</div>
+<div class="flex items-center gap-4">
+<img alt="Success Story" class="w-16 h-16 grayscale hover:grayscale-0 transition-all duration-500" data-alt="A portrait of a middle-aged executive man with a kind, professional smile, wearing a tailored navy blue suit and a crisp white shirt. The background is a soft-focus corporate office with warm lighting. The image style is polished, clean, and reflects high-end private services." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpBM8De0gOXwvWuuP-9roeshR8uhbqAYdZkVpM-akQAUCDwF0ZbH1Zc7_kAHYY6aQGYGCB4tWWpYA8y2GZNoOh_7nbXGCLVdsButm1nhjW60zGVc59_V4qFXOUwhJnmqbqHQk3ZSx6n2c6GHyioBrxiO5dZvsfma0b5mkoi_r53p7XOwsk4PhxB-caCQxBBRwEroYjpARHUIeOpgoNMrcn66UFdFRDSM8g5hSq-GegozMbWF5P9K8O3EqUT_bwHc_6SbAUtF-iCZ7F"/>
+<div>
+<h6 class="font-label-md text-primary">Dr. Ramesh Kumar</h6>
+<p class="text-label-sm text-on-surface-variant">Parent of B.Tech CSE Student</p>
+</div>
+</div>
+</div>
+<!-- Testimonial 2 -->
+<div class="bg-white p-10 executive-border flex flex-col justify-between">
+<div>
+<span class="material-symbols-outlined text-secondary-fixed-dim text-5xl mb-6">format_quote</span>
+<p class="font-body-lg italic text-primary mb-8 leading-relaxed">"Direct admission seemed like a daunting black box until I consulted with Guru360. Their transparency regarding fees and the timeline gave us total peace of mind."</p>
+</div>
+<div class="flex items-center gap-4">
+<img alt="Success Story" class="w-16 h-16 grayscale hover:grayscale-0 transition-all duration-500" data-alt="A headshot of a confident young professional woman with her hair styled neatly, wearing a sophisticated white blazer. She is smiling naturally. The lighting is soft and high-key, creating a bright, modern, and prestigious aesthetic. Background is a clean, minimal architectural space." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9Y2_VcpUd76ktSxX-WRk1IO6NslirL7AF51YR-G79EV607IeJ-bMSd1EKHYtW7KAIjpmBCa4pEvDGtqXe8WAkwWm13lwK3Vsas5Tp6D9XZy4PJmQ7nK9oUZsZwb8yeBfqV3I-rkaJqjtdB_yc5Pd2bNIhT9rvCDqStJya9q5VdZ7tv905OEA0vBr8Rr8xH9FlcDaSwjbL4EVWcrldxh-gn3q_a7mQ3XVXkNJcdTB-8Li1PB7_vB2JKlvpt2r15kW-6KXVmQjcOxuz"/>
+<div>
+<h6 class="font-label-md text-primary">Ananya Sharma</h6>
+<p class="text-label-sm text-on-surface-variant">MBA Candidate, PES University</p>
+</div>
+</div>
+</div>
+<!-- Testimonial 3 -->
+<div class="bg-white p-10 executive-border flex flex-col justify-between">
+<div>
+<span class="material-symbols-outlined text-secondary-fixed-dim text-5xl mb-6">format_quote</span>
+<p class="font-body-lg italic text-primary mb-8 leading-relaxed">"Highly recommended for parents looking for authoritative guidance without the usual consultancy sales pitch. Purely administrative excellence."</p>
+</div>
+<div class="flex items-center gap-4">
+<img alt="Success Story" class="w-16 h-16 grayscale hover:grayscale-0 transition-all duration-500" data-alt="A portrait of a mature professional man with grey hair, wearing stylish glasses and a charcoal grey turtleneck. He exudes wisdom and professional authority. The lighting is sophisticated and editorial, with a dark, high-contrast background that emphasizes a premium, executive service feel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDxhFdYz_UX8Wo4F3u8UIxQRyHhxXnnhInU09QbXQ3d7zLiKTLocW4uohMsrhOQnvr6rlUSO3z8dpehbUnf-hFATZfHRrGPb_6bgxfuKVMNDibLCuUEfQX1V0dWRAOI1DYtVAsBCac1yyOH4sS6coQdlhJft9BZZ2i_ezt2Z0Bpc2e9EdXY8GHx6BdgTpPqcZuQpXd1tN6-hE_ah8ctJ68cbl867O9_kGGm6DVWnFeIBiPGjbM16m9p7lqAK58ah5-5EPK0kVkXKjj"/>
+<div>
+<h6 class="font-label-md text-primary">Vikram Singh</h6>
+<p class="text-label-sm text-on-surface-variant">Director, Tech Solutions India</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-24 px-margin-desktop max-w-max-width mx-auto">
+<div class="bg-primary p-16 relative overflow-hidden text-center md:text-left">
+<!-- Decorative Elements -->
+<div class="absolute top-0 right-0 w-64 h-64 bg-secondary-fixed/5 rotate-45 translate-x-32 -translate-y-32"></div>
+<div class="absolute bottom-0 left-0 w-32 h-32 border border-secondary-fixed/10 -translate-x-16 translate-y-16"></div>
+<div class="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-primary mb-6">Begin Your Executive Path</h2>
+<p class="text-on-primary-container font-body-lg max-w-md">Our consultants are available for private briefings. Secure your future in India's top academic institutions today.</p>
+</div>
+<div class="flex flex-col gap-4">
+<div class="flex bg-white p-1">
+<input class="flex-1 border-none focus:ring-0 px-6 font-body-md text-primary" placeholder="Professional Email" type="email"/>
+<button class="bg-secondary text-on-secondary px-8 py-3 uppercase tracking-widest font-bold">Register</button>
+</div>
+<p class="text-on-primary-container text-label-sm italic text-center md:text-left">Privacy is our cornerstone. We never share student data.</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="w-full py-12 bg-on-background dark:bg-surface-container-lowest border-t border-outline-variant">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-max-width mx-auto">
+<div class="col-span-1 md:col-span-2">
+<div class="font-headline-md text-headline-md text-secondary-fixed mb-6">Admission Guru360</div>
+<p class="text-surface-variant font-body-md max-w-md mb-8">
+                    © 2024 Admission Guru360. All Rights Reserved. Authoritative Educational Consultancy for B.Tech Admissions.
+                </p>
+</div>
+<div class="flex flex-col space-y-4">
+<span class="text-on-secondary font-bold uppercase tracking-widest text-xs mb-2">Partner Universities</span>
+<a class="text-surface-variant hover:text-secondary-fixed transition-colors font-body-md hover:translate-x-1 duration-200" href="#">RVCE Bangalore</a>
+<a class="text-surface-variant hover:text-secondary-fixed transition-colors font-body-md hover:translate-x-1 duration-200" href="#">PES University</a>
+<a class="text-surface-variant hover:text-secondary-fixed transition-colors font-body-md hover:translate-x-1 duration-200" href="#">BMSCE</a>
+<a class="text-surface-variant hover:text-secondary-fixed transition-colors font-body-md hover:translate-x-1 duration-200" href="#">MSRIT</a>
+</div>
+<div class="flex flex-col space-y-4">
+<span class="text-on-secondary font-bold uppercase tracking-widest text-xs mb-2">Resources &amp; Legal</span>
+<a class="text-surface-variant hover:text-secondary-fixed transition-colors font-body-md hover:translate-x-1 duration-200" href="#">B.Tech Programs</a>
+<a class="text-surface-variant hover:text-secondary-fixed transition-colors font-body-md hover:translate-x-1 duration-200" href="#">MBA Admissions</a>
+<a class="text-surface-variant hover:text-secondary-fixed transition-colors font-body-md hover:translate-x-1 duration-200" href="#">Privacy Policy</a>
+<a class="text-surface-variant hover:text-secondary-fixed transition-colors font-body-md hover:translate-x-1 duration-200" href="#">Legal Disclaimer</a>
+</div>
+</div>
+</footer>
+<script>
+        // Micro-interactions for that "Executive" feel
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('mouseenter', () => {
+                button.style.letterSpacing = '0.3em';
+            });
+            button.addEventListener('mouseleave', () => {
+                button.style.letterSpacing = '0.1em';
+            });
+        });
+
+        // Simple revealing animations on scroll
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+            observer.observe(section);
+        });
+    </script>
+</body></html>
